@@ -1,0 +1,14 @@
+[
+  { "name": "NEVUCORE", "file": "brand-nevucore.svg", "tag": "Core Studio" },
+  { "name": "UNREAL ENGINE 5", "file": "brand-unreal.svg", "tag": "Game Engine & 3D" },
+  { "name": "RUST SYSTEMS", "file": "brand-rust.svg", "tag": "Async Kernels" },
+  { "name": "NEXT.JS 15", "file": "brand-nextjs.svg", "tag": "Full-Stack Web" },
+  { "name": "THREE.JS / WEBGL", "file": "brand-threejs.svg", "tag": "Spatial 3D" },
+  { "name": "C++23", "file": "brand-cpp.svg", "tag": "Low-Level Shaders" },
+  { "name": "POSTGRESQL", "file": "brand-postgres.svg", "tag": "Database Indexing" },
+  { "name": "DOCKER", "file": "brand-docker.svg", "tag": "Containers & Cloud" },
+  { "name": "TYPESCRIPT", "file": "brand-typescript.svg", "tag": "Type-Safe Systems" },
+  { "name": "PYTHON & AI", "file": "brand-python.svg", "tag": "Machine Learning" },
+  { "name": "GRAPHQL", "file": "brand-graphql.svg", "tag": "API Federation" },
+  { "name": "TAILWIND CSS", "file": "brand-tailwind.svg", "tag": "Design Architecture" }
+]

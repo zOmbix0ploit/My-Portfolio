@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141417"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+    <radialGradient id="portalGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#e32b3c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#e32b3c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <rect width="960" height="600" fill="url(#portalGlow)"/>
+  <rect x="30" y="30" width="900" height="540" rx="12" fill="none" stroke="#2a2a30" stroke-width="1.5"/>
+  <circle cx="60" cy="60" r="5" fill="#e32b3c"/>
+  <circle cx="80" cy="60" r="5" fill="#3a3a42"/>
+  <circle cx="100" cy="60" r="5" fill="#3a3a42"/>
+  <text x="125" y="64" fill="#a09c9a" font-family="-apple-system, sans-serif" font-size="12" font-weight="600">dev.nevucore.com // DEVELOPER PORTAL</text>
+  
+  <rect x="60" y="100" width="840" height="380" rx="8" fill="#101012" stroke="#222226" stroke-width="1"/>
+  <text x="480" y="270" fill="#f2efeb" font-family="'Anton', sans-serif" font-size="44" font-weight="900" text-anchor="middle" letter-spacing="2">NEVUCORE DEVELOPER PORTAL</text>
+  <text x="480" y="315" fill="#e32b3c" font-family="monospace" font-size="16" text-anchor="middle" letter-spacing="3">CENTRAL API &amp; TECHNICAL REPOSITORY</text>
+  <text x="480" y="355" fill="#a09c9a" font-family="sans-serif" font-size="14" text-anchor="middle">React · TypeScript · Next.js · Automated CI/CD · Dark Luxury UI</text>
+  <rect x="400" y="390" width="160" height="38" rx="19" fill="#e32b3c"/>
+  <text x="480" y="414" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">EXPLORE APIS</text>
+</svg>
+

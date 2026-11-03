@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RESEARCH LAB &middot; Nethuna Sahas &middot; Motion &amp; Shaders Logbook</title>
+  <meta name="description" content="Research studies in real-time rendering, signed surfaces, GPU fluid dynamics, and compute shaders by Nethuna Sahas (Founder at Nevucore).">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; media-src 'self' https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev data: blob:; connect-src 'self' https: ws: wss:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="scrollable-page">
+
+  <header class="top-nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1.6"/>
+          <polygon points="20,7 23,16 32,13 25,20 32,27 23,24 20,33 17,24 8,27 15,20 8,13 17,16" fill="currentColor"/>
+        </svg>
+        <div class="brand-text">
+          <div class="brand-title">NETHUNA SAHAS</div>
+          <div class="brand-subtitle">Founder at Nevucore &middot; 6+ Years Exp</div>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Sections">
+        <a href="index.html" class="nav-link">Core</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="about.html" class="nav-link">Dossier</a>
+        <a href="research.html" class="nav-link active">Research Lab</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Light and Dark Mode" title="Toggle Light / Dark Mode">
+          <span class="theme-label-light">LIGHT</span>
+          <span class="theme-divider">/</span>
+          <span class="theme-label-dark">DARK</span>
+        </button>
+        <div class="nav-status">
+          <span class="status-dot"></span>
+          <span>Available for Projects</span>
+        </div>
+        <div class="counter-badge" title="6+ Core Projects Delivered">06</div>
+        <a href="https://www.linkedin.com/in/nethuna-sahas-a83544394" target="_blank" rel="noopener noreferrer" class="cta-btn">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    
+    <header class="page-header">
+      <span class="page-code">RESEARCH LAB // 03 // REAL-TIME MOTION STUDIES</span>
+      <h1 class="page-title">Shaders, Fluids &amp; Signed Surfaces</h1>
+      <p class="page-desc">
+        An open logbook of computational graphics experiments: mathematically formulated vector fields, Eulerian grid solvers, and custom GPU compute passes executed across native engines and modern browsers.
+      </p>
+    </header>
+
+    <div class="studies-grid">
+      
+      <article class="study-card">
+        <div class="study-header">
+          <span class="study-code">STUDY 01 // GEOMETRY</span>
+          <span class="study-tag">SDF &middot; RAYMARCHING</span>
+        </div>
+        <h2 class="study-title">Signed Distance Field Sculpted Manifolds</h2>
+        <p class="study-desc">
+          Continuous implicit mathematical representations of 3D forms. By mirroring the depth axis and applying quaternion rotation, particles are constrained to smooth, organic hollow ring surfaces with zero polygonal rasterization artifacts.
+        </p>
+        <pre class="code-snippet"><code>float sdfShape(vec3 p) {
+  // Mirror depth axis for symmetric soft seam
+  p.z = sqrt(p.z * p.z + 0.0215) - sqrt(0.012);
+  
+  // Quaternion rotation by (0.5, 0.5, 0.5, 0.5)
+  vec3 qv = vec3(0.5);
+  p = p + 2.0 * cross(qv, cross(qv, p) + 0.5 * p);
+  
+  vec2 ring = vec2(length(p.xz) - 0.42, p.y);
+  return length(ring) - 0.16 + sin(p.x * 5.0) * 0.035;
+}</code></pre>
+      </article>
+
+      <article class="study-card">
+        <div class="study-header">
+          <span class="study-code">STUDY 02 // DYNAMICS</span>
+          <span class="study-tag">NAVIER-STOKES &middot; EULERIAN</span>
+        </div>
+        <h2 class="study-title">2D/3D GPU Incompressible Fluid Solver</h2>
+        <p class="study-desc">
+          Classic GPU Eulerian fluid mechanics running in half-float ping-pong render targets. Resolves velocity advection, divergence, Jacobi pressure relaxation, and gradient subtraction to drive organic particle eddies.
+        </p>
+        <pre class="code-snippet"><code>// Jacobi pressure iteration on 256x256 grid
+float L = texture2D(uPressure, vUv - vec2(dx, 0.0)).x;
+float R = texture2D(uPressure, vUv + vec2(dx, 0.0)).x;
+float T = texture2D(uPressure, vUv + vec2(0.0, dy)).x;
+float B = texture2D(uPressure, vUv - vec2(0.0, dy)).x;
+float div = texture2D(uDivergence, vUv).x;
+float p = (L + R + T + B - div) * 0.25;</code></pre>
+      </article>
+
+      <article class="study-card">
+        <div class="study-header">
+          <span class="study-code">STUDY 03 // VECTOR FIELDS</span>
+          <span class="study-tag">BRIDSON CURL NOISE</span>
+        </div>
+        <h2 class="study-title">Divergence-Free Vector Field Turbulence</h2>
+        <p class="study-desc">
+          Analytic curl noise derived from three sine-sum potentials. Guaranteed zero divergence means particles swirl in natural fluid currents without clumping or collapsing into localized singularities.
+        </p>
+        <pre class="code-snippet"><code>vec3 curlNoise(vec3 p) {
+  const float e = 0.01;
+  vec3 dx = (potential(p + vec3(e,0,0)) - potential(p - vec3(e,0,0))) / (2.0 * e);
+  vec3 dy = (potential(p + vec3(0,e,0)) - potential(p - vec3(0,e,0))) / (2.0 * e);
+  vec3 dz = (potential(p + vec3(0,0,e)) - potential(p - vec3(0,0,e))) / (2.0 * e);
+  return normalize(vec3(dy.z - dz.y, dz.x - dx.z, dx.y - dy.x));
+}</code></pre>
+      </article>
+
+      <article class="study-card">
+        <div class="study-header">
+          <span class="study-code">STUDY 04 // COMPUTE</span>
+          <span class="study-tag">WEBGPU &middot; WGSL</span>
+        </div>
+        <h2 class="study-title">WebGPU Compute Shader Pipelines</h2>
+        <p class="study-desc">
+          Advancing from WebGL 2.0 to raw WebGPU compute passes. Direct GPU memory access via storage buffers enables simulation of 1,000,000+ spatial points with hardware-level memory barriers and zero CPU bottleneck.
+        </p>
+        <pre class="code-snippet"><code>@compute @workgroup_size(64)
+fn simulateParticles(@builtin(global_invocation_id) id: vec3&lt;u32&gt;) {
+  let index = id.x;
+  if (index &gt;= particleCount) { return; }
+  var pos = particles[index].position;
+  pos += curlVector(pos * 0.1) * deltaTime;
+  particles[index].position = pos;
+}</code></pre>
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer class="universal-footer">
+    <div class="footer-inner">
+      <div>NETHUNA SAHAS &copy; 2026 &middot; FOUNDER AT NEVUCORE</div>
+      <a href="index.html" class="footer-back-link">&larr; Return to Motion Core</a>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/main.js"></script>
+</body>
+</html>

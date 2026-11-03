@@ -1,0 +1,92 @@
+[
+  {
+    "id": "unreal-3d-action-game",
+    "title": "UNREAL 3D ACTION GAME PROJECT",
+    "category": "Game Engine",
+    "year": "2024–2025",
+    "role": "Lead Gameplay & Systems Architect",
+    "client": "NevuCore Labs",
+    "description": "An original 3D action combat prototype built from the ground up featuring custom HLSL surface shaders, procedural biome generation, responsive deterministic combat loops, and real-time GPU particle physics in Unreal Engine 5.5.",
+    "type": "video",
+    "media": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/oraciteslArea.mp4",
+    "videoSrc": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/oraciteslArea.mp4",
+    "image": "./Asset/img/preview-game.svg",
+    "tools": ["Unreal Engine 5.5", "C++23", "HLSL Shaders", "Chaos Physics", "Lumen GI"]
+  },
+  {
+    "id": "scalable-lms-platform",
+    "title": "SCALABLE LEARNING MANAGEMENT SYSTEM",
+    "category": "Full-Stack",
+    "year": "2025–2026",
+    "role": "Principal Systems Architect",
+    "client": "Apex Education Systems",
+    "description": "Full-scale enterprise learning platform engineered for continuous video streaming, concurrent user telemetry, automated evaluation pipelines, and sub-10ms query response for thousands of active students.",
+    "type": "video",
+    "media": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/facet-glass-hero.mp4",
+    "videoSrc": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/facet-glass-hero.mp4",
+    "image": "./Asset/img/preview-lms.svg",
+    "tools": ["React 19", "Node.js", "PostgreSQL", "Docker", "GraphQL", "Redis"]
+  },
+  {
+    "id": "nevucore-digital-studio",
+    "title": "NEVUCORE DIGITAL ENGINEERING STUDIO",
+    "category": "3D & WebGL",
+    "year": "2025",
+    "role": "Founder & Technical Director",
+    "client": "NevuCore International",
+    "description": "The flagship platform for NevuCore's creative engineering agency. Features bespoke 3D WebGL spatial interactions, fluid particle simulation shaders, micro-choreography, and instant edge CDN delivery.",
+    "type": "video",
+    "media": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/stellarmind-hero.mp4",
+    "videoSrc": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/stellarmind-hero.mp4",
+    "image": "./Asset/img/preview-studio.svg",
+    "tools": ["Next.js 15", "Three.js", "WebGL Shaders", "Tailwind CSS", "TypeScript"]
+  },
+  {
+    "id": "dev-nevucore-ecosystem",
+    "title": "DEV.NEVUCORE CLIENT PLATFORM ECOSYSTEM",
+    "category": "AI & Systems",
+    "year": "2025–2026",
+    "role": "Lead Infrastructure Engineer",
+    "client": "NevuCore Cloud Ops",
+    "description": "Continuous delivery ecosystem hosting high-performance client platforms, distributed microservices, real-time telemetry dashboards, and zero-downtime Canary deployments.",
+    "type": "video",
+    "media": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/thedropthroughArea.mp4",
+    "videoSrc": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/thedropthroughArea.mp4",
+    "image": "./Asset/img/preview-dev.svg",
+    "tools": ["Go", "Docker", "Kubernetes", "Prometheus", "WebSockets", "epoll"]
+  },
+  {
+    "id": "cyberpunk-environment",
+    "title": "REAL-TIME 3D SHADER & PIPELINE BREAKDOWN",
+    "category": "3D & WebGL",
+    "year": "2025",
+    "role": "Real-Time Graphics Architect",
+    "client": "NevuCore 3D Labs",
+    "description": "Real-time Unreal Engine 5 and WebGL environment breakdown featuring volumetric fog, raytraced Lumen global illumination, procedural shaders, and GPU compute buffers.",
+    "type": "render",
+    "media": "REAL-TIME 3D PIPELINE",
+    "image": "./Asset/img/breakdown-final.png",
+    "renders": [
+      {
+        "solid": "./Asset/img/breakdown-solid.png",
+        "final": "./Asset/img/breakdown-final.png",
+        "lighting": "./Asset/img/breakdown-final.png"
+      }
+    ],
+    "tools": ["Unreal Engine 5.5", "HLSL Shaders", "Lumen GI", "WebGL", "Three.js"]
+  },
+  {
+    "id": "tokio-async-kernel",
+    "title": "HIGH-CONCURRENCY ASYNC TOKIO KERNEL",
+    "category": "AI & Systems",
+    "year": "2025",
+    "role": "Systems Architect",
+    "client": "NevuCore Core Labs",
+    "description": "Low-latency asynchronous network kernel built on Rust and Tokio runtime, handling WebSocket message brokering with zero memory allocations in the hot path and sub-millisecond p99 latencies.",
+    "type": "video",
+    "media": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/oraciteslArea.mp4",
+    "videoSrc": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/oraciteslArea.mp4",
+    "image": "./Asset/img/preview-kernel.svg",
+    "tools": ["Rust", "Tokio", "gRPC", "Protobuf", "Linux Async I/O"]
+  }
+]

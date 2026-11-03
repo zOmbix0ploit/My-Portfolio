@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOSSIER &middot; Nethuna Sahas &middot; Engineering Philosophy &amp; Background</title>
+  <meta name="description" content="Engineering dossier of Nethuna Sahas: Software Engineer, 3D Game Developer, and Founder at Nevucore. Read his technical philosophy, technical arsenal, and experience history.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; media-src 'self' https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev data: blob:; connect-src 'self' https: ws: wss:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="scrollable-page">
+
+  <header class="top-nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1.6"/>
+          <polygon points="20,7 23,16 32,13 25,20 32,27 23,24 20,33 17,24 8,27 15,20 8,13 17,16" fill="currentColor"/>
+        </svg>
+        <div class="brand-text">
+          <div class="brand-title">NETHUNA SAHAS</div>
+          <div class="brand-subtitle">Founder at Nevucore &middot; 6+ Years Exp</div>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Sections">
+        <a href="index.html" class="nav-link">Core</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="about.html" class="nav-link active">Dossier</a>
+        <a href="research.html" class="nav-link">Research Lab</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Light and Dark Mode" title="Toggle Light / Dark Mode">
+          <span class="theme-label-light">LIGHT</span>
+          <span class="theme-divider">/</span>
+          <span class="theme-label-dark">DARK</span>
+        </button>
+        <div class="nav-status">
+          <span class="status-dot"></span>
+          <span>Available for Projects</span>
+        </div>
+        <div class="counter-badge" title="6+ Core Projects Delivered">06</div>
+        <a href="https://www.linkedin.com/in/nethuna-sahas-a83544394" target="_blank" rel="noopener noreferrer" class="cta-btn">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    
+    <header class="page-header">
+      <span class="page-code">DOSSIER // 02 // IDENTITY &amp; PHILOSOPHY</span>
+      <h1 class="page-title">Engineering Dossier &amp; Architecture Mindset</h1>
+      <p class="page-desc">
+        A record of technical philosophy, architectural decisions, and capabilities shaped over 6+ years of active engineering across native 3D engines, real-time graphics, and enterprise systems.
+      </p>
+    </header>
+
+    <div class="dossier-layout">
+      
+      <div class="dossier-col">
+        
+        <div class="dossier-section">
+          <span class="section-label">[IDENTITY // FOUNDER // CREATIVE ENGINEER]</span>
+          <p class="dossier-p">
+            I am <strong>Nethuna Sahas</strong>, a software engineer, 3D game developer, and the founder of <strong>Nevucore</strong> (headquartered across <a href="https://dev.nevucore.com" target="_blank" rel="noopener noreferrer">dev.nevucore.com</a> and <a href="https://nevocore.com" target="_blank" rel="noopener noreferrer">nevocore.com</a>).
+          </p>
+          <p class="dossier-p">
+            My career is rooted in bridging the divide between low-level performance engineering and high-fidelity interactive digital experiences. I believe software should not merely function; it should be fast, aesthetically uncompromising, and built from first principles without relying on bloated, fragile off-the-shelf templates.
+          </p>
+        </div>
+
+        <div class="dossier-section">
+          <span class="section-label">[THE NEVUCORE ARCHITECTURAL PILLARS]</span>
+          <div class="pillars-grid">
+            
+            <div class="pillar-card">
+              <span class="pillar-num">PILLAR 01</span>
+              <h2 class="pillar-name">Zero-Bloat Algorithmic Foundation</h2>
+              <p class="pillar-desc">
+                Rejecting multi-hundred megabyte dependency trees for trivial tasks. Whether authoring an HLSL compute shader in Unreal Engine or an enterprise microservice in Rust, code is structured with hardware memory layout, SIMD vectorization, and cache efficiency as priority one.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <span class="pillar-num">PILLAR 02</span>
+              <h2 class="pillar-name">Real-Time Telemetry &amp; Streaming</h2>
+              <p class="pillar-desc">
+                From our flagship LMS platform to distributed client platforms, data is treated as an active, living stream. We leverage persistent WebSockets, asynchronous event loops, and differential synchronization to keep clients and servers unified with sub-millisecond overhead.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <span class="pillar-num">PILLAR 03</span>
+              <h2 class="pillar-name">Spatial 3D &amp; In-Browser GPU Dynamics</h2>
+              <p class="pillar-desc">
+                Real-time graphics belong on the open web. We design ping-pong GPGPU particle physics, Navier-Stokes fluid simulations, and signed distance fields that run at a locked 60 FPS in modern WebGL and WebGPU runtimes.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <span class="pillar-num">PILLAR 04</span>
+              <h2 class="pillar-name">Resilient Multi-Tenant Security</h2>
+              <p class="pillar-desc">
+                Enterprise architectures require uncompromising isolation. Our platforms employ strict role-based access control (RBAC), zero-trust network models, cryptographic token signatures, and partitioned database schemas.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dossier-col">
+        
+        <div class="dossier-section">
+          <span class="section-label">[TECHNICAL ARSENAL]</span>
+          
+          <div class="arsenal-group">
+            <span class="arsenal-group-title">Languages &amp; Runtimes</span>
+            <div class="cluster">
+              <span class="tag-pill">C++23</span>
+              <span class="tag-pill">TypeScript 5</span>
+              <span class="tag-pill">Rust</span>
+              <span class="tag-pill">Go 1.23</span>
+              <span class="tag-pill">Python 3.12</span>
+              <span class="tag-pill">JavaScript</span>
+              <span class="tag-pill">C#</span>
+              <span class="tag-pill">Java</span>
+            </div>
+          </div>
+
+          <div class="arsenal-group">
+            <span class="arsenal-group-title">Real-Time Graphics &amp; 3D</span>
+            <div class="cluster">
+              <span class="tag-pill">Unreal Engine 5.5</span>
+              <span class="tag-pill">HLSL Compute Shaders</span>
+              <span class="tag-pill">GLSL</span>
+              <span class="tag-pill">WebGPU / WGSL</span>
+              <span class="tag-pill">Three.js</span>
+              <span class="tag-pill">WebGL 2.0</span>
+            </div>
+          </div>
+
+          <div class="arsenal-group">
+            <span class="arsenal-group-title">Full-Stack &amp; Distributed Cloud</span>
+            <div class="cluster">
+              <span class="tag-pill">Next.js 15</span>
+              <span class="tag-pill">React 19</span>
+              <span class="tag-pill">Node.js</span>
+              <span class="tag-pill">PostgreSQL</span>
+              <span class="tag-pill">GraphQL</span>
+              <span class="tag-pill">Docker</span>
+              <span class="tag-pill">Tailwind CSS</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="dossier-section">
+          <span class="section-label">[CHRONOLOGY &amp; MILESTONES]</span>
+          <div class="timeline-list">
+            
+            <div class="timeline-item">
+              <span class="timeline-year">2024 &mdash; PRESENT</span>
+              <div class="timeline-title">Nevucore Studio &amp; dev.nevucore.com</div>
+              <div class="timeline-desc">Founded Nevucore to architect high-performance digital platforms, client hubs, and real-time graphics applications.</div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-year">2023 &mdash; 2024</span>
+              <div class="timeline-title">Unreal 3D Game Development</div>
+              <div class="timeline-desc">Architecting an original 3D action game with custom HLSL compute passes and deterministic combat loops in C++.</div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-year">2022 &mdash; 2023</span>
+              <div class="timeline-title">Enterprise Scalable LMS Platform</div>
+              <div class="timeline-desc">Engineered full-stack LMS backend with live student telemetry and low-latency automated code evaluation pipelines.</div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-year">2020 &mdash; 2022</span>
+              <div class="timeline-title">Core Systems &amp; WebGL Research</div>
+              <div class="timeline-desc">Authored foundational graphics shaders, procedural rendering experiments, and distributed web services.</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="universal-footer">
+    <div class="footer-inner">
+      <div>NETHUNA SAHAS &copy; 2026 &middot; FOUNDER AT NEVUCORE</div>
+      <a href="index.html" class="footer-back-link">&larr; Return to Motion Core</a>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/main.js"></script>
+</body>
+</html>
