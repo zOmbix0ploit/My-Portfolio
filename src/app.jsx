@@ -271,7 +271,7 @@ function Hero({ onProject }) {
         transition={{ duration: 1.2, delay: 0.2 }}
       >
         <img
-          src="./Asset/img/renando-portrait.png"
+          src="./Asset/img/nethuna-portrait.png"
           alt="Nethuna Sahas - Full Stack & AI Software Engineer"
           width="1024"
           height="1536"
