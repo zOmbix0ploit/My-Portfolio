@@ -4,10 +4,16 @@ node_modules/
 .pnp.js
 
 # Production Build Outputs
-dist/
+/dist/
 build/
 .next/
 out/
+
+# Explicitly ensure static Asset bundle is tracked for GitHub Pages
+!Asset/
+!Asset/**
+!Asset/dist/
+!Asset/dist/**
 
 # Environment Variables
 .env*
