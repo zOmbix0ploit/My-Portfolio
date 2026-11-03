@@ -293,9 +293,15 @@ function Hero({ onProject }) {
         <p className="hero-description">
           Founder at NevuCore. Engineering scalable web ecosystems, 3D WebGL experiences, and high-throughput backend architectures.
         </p>
-        <Magnetic href="#portfolio" className="primary-link">
-          View My Work <ArrowDown size={17} />
-        </Magnetic>
+        <div className="hero-cta-wrap">
+          <Magnetic href="#portfolio" className="primary-link">
+            View My Work <ArrowDown size={17} />
+          </Magnetic>
+          <a href="./Asset/cv/resume.pdf" download="W.A._Nethuna_Sahas_CV.pdf" className="hero-cv-btn">
+            <Download size={15} />
+            <span>DOWNLOAD CV</span>
+          </a>
+        </div>
         <span className="hero-location">
           <MapPin size={12} /> KALUTARA, SRI LANKA
         </span>

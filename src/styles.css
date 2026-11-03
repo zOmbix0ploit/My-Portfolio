@@ -494,12 +494,283 @@
   cursor: ew-resize !important;
 }
 
-.comparison-caption {
-  display: flex !important;
-  justify-content: space-between !important;
-  margin-top: 16px !important;
-  color: var(--muted) !important;
-  font-size: 10px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.08em !important;
+.hero-cv-btn {
+  display: none;
+}
+
+.hero-cta-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   Complete Mobile Responsiveness Overhaul (iPhone / Android / Tablet)
+   ========================================================================== */
+@media (max-width: 800px) {
+  :root {
+    --gutter: 18px !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  /* 1. Header */
+  .site-header {
+    height: 60px !important;
+    padding: 0 16px !important;
+  }
+  .wordmark {
+    font-size: 20px !important;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+  .menu-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 2. Hero Section */
+  .hero {
+    height: 840px !important;
+    min-height: 840px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-top {
+    top: 14px !important;
+    left: 16px !important;
+    right: 16px !important;
+    font-size: 8px !important;
+  }
+
+  .hero-title {
+    top: 68px !important;
+    font-size: clamp(2.4rem, 13vw, 4.2rem) !important;
+    letter-spacing: -0.01em !important;
+    text-align: center !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    opacity: 0.9 !important;
+  }
+
+  .hero-portrait {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 85% !important;
+    max-width: 330px !important;
+    height: 480px !important;
+    bottom: 240px !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+  }
+
+  .hero-portrait img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%) !important;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%) !important;
+  }
+
+  /* Hero Side Stats (Positioned neatly in upper-right without collision) */
+  .hero-side {
+    position: absolute !important;
+    right: 16px !important;
+    top: 135px !important;
+    bottom: auto !important;
+    width: 82px !important;
+    z-index: 5 !important;
+  }
+
+  .hero-manifesto {
+    display: none !important;
+  }
+
+  .hero-stats {
+    background: rgba(9, 9, 9, 0.75) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border-radius: 12px !important;
+    padding: 10px 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    margin: 0 !important;
+  }
+
+  .hero-stats > div {
+    padding: 6px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    gap: 2px !important;
+  }
+
+  .hero-stats > div:last-child {
+    border-bottom: none !important;
+  }
+
+  .hero-stats > div > .display {
+    font-size: 26px !important;
+    line-height: 1 !important;
+  }
+
+  .hero-stats > div > .display span {
+    font-size: 15px !important;
+  }
+
+  .hero-stats p {
+    font-size: 7px !important;
+    line-height: 1.25 !important;
+    color: var(--muted) !important;
+  }
+
+  .hero-award-stat > a {
+    font-size: 7px !important;
+    min-height: 24px !important;
+    gap: 4px !important;
+  }
+
+  .hero-stats > a {
+    display: none !important;
+  }
+
+  /* Hero Intro */
+  .hero-intro {
+    position: absolute !important;
+    left: 16px !important;
+    right: 16px !important;
+    bottom: 72px !important;
+    width: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    z-index: 10 !important;
+  }
+
+  .hero-intro .handwriting {
+    font-size: 24px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .hero-intro h1 {
+    font-size: clamp(30px, 9vw, 42px) !important;
+    line-height: 1.05 !important;
+    white-space: normal !important;
+    margin-bottom: 6px !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .hero-role {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .hero-description {
+    font-size: 11px !important;
+    max-width: 310px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .hero-cta-wrap {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .primary-link {
+    padding: 10px 18px !important;
+    font-size: 11px !important;
+    height: 40px !important;
+  }
+
+  .hero-cv-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    padding: 9px 16px !important;
+    height: 40px !important;
+    border-radius: 9999px !important;
+    background: rgba(227, 43, 60, 0.12) !important;
+    border: 1px solid rgba(227, 43, 60, 0.45) !important;
+    color: #f2efeb !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+  }
+
+  .hero-cv-btn:hover {
+    background: #e32b3c !important;
+    color: #ffffff !important;
+  }
+
+  .hero-location {
+    font-size: 8px !important;
+    margin-top: 10px !important;
+  }
+
+  .hero-bottom {
+    height: 52px !important;
+    left: 16px !important;
+    right: 16px !important;
+    font-size: 8px !important;
+  }
+
+  /* 3. Portfolio & Grid */
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  .filters {
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    padding-bottom: 8px !important;
+    scrollbar-width: none !important;
+  }
+  .filters::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* 4. Breakdown Section */
+  .breakdown {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding: 40px 16px !important;
+  }
+
+  .comparison-stage {
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  /* 5. About & Studio Grid */
+  .studio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .software-row {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  /* 6. Contact Section */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .contact-links > a,
+  .contact-links > div {
+    font-size: 11px !important;
+    padding: 12px 14px !important;
+  }
 }
