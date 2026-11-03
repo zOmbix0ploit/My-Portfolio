@@ -1020,10 +1020,17 @@ function Contact({ onProject }) {
             </span>
             <ArrowUpRight size={16} />
           </a>
-          <a href="https://github.com/nethunasahas" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/zOmbix0ploit" target="_blank" rel="noopener noreferrer">
             <ExternalLink />
             <span>
-              <small>GITHUB</small>github.com/nethunasahas
+              <small>GITHUB</small>github.com/zOmbix0ploit
+            </span>
+            <ArrowUpRight size={16} />
+          </a>
+          <a href="https://www.linkedin.com/in/nethuna-sahas-a83544394/" target="_blank" rel="noopener noreferrer">
+            <ExternalLink />
+            <span>
+              <small>LINKEDIN</small>linkedin.com/in/nethuna-sahas
             </span>
             <ArrowUpRight size={16} />
           </a>
